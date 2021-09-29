@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- displays site properly based on user's device -->
+    <script src="app.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            background-color: hsl(226, 43%, 10%);
+            box-sizing: border-box;
+
+        }
+
+        .container {
+
+            width: 75%;
+            display: grid;
+            margin: 100px;
+            padding: 10px;
+            grid-gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
+
+        }
+
+        .box {
+
+            background-color: hsl(246, 80%, 60%);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .box .box-img {
+            position: relative;
+            z-index: 1;
+        }
+
+        .box card {
+            margin-top: 60px;
+        }
+
+        .box card p {
+            margin-top: 20px;
+            margin: 10px;
+
+        }
+
+        .box::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .box:nth-child(1) {
+
+            background-color: hsl(246, 80%, 60%);
+            color: white;
+            border-radius: 10px;
+            font-family: 'Rubik', sans-serif;
+
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+
+        .img-jemery {
+            margin: 10px;
+            display: inline-block;
+            width: 120px;
+            padding: 10px;
+
+
+        }
+
+        .box:nth-child(2) {
+            background-color: hsl(235, 46%, 20%);
+            color: white;
+            font-family: 'Rubik', sans-serif;
+            font-size: 18px;
+            border-radius: 10px;
+            margin-top: 65px;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+
+        }
+
+        .date p:hover {
+            color: white;
+
+        }
+
+
+        .box:nth-child(3) {
+            background-color: hsl(15, 100%, 70%);
+            color: white;
+            border-radius: 10px;
+
+
+        }
+
+        .box:nth-child(4) {
+            background-color: hsl(195, 74%, 62%);
+            border-radius: 10px;
+
+
+        }
+
+        .box:nth-child(5) {
+            background-color: hsl(348, 100%, 68%);
+            border-radius: 10px;
+        }
+
+        .box:nth-child(6) {
+            background-color: hsl(145, 58%, 55%);
+            border-radius: 10px;
+            /*margin-block: auto;*/
+        }
+
+        .box:nth-child(7) {
+            background-color: hsl(264, 64%, 52%);
+            border-radius: 10px;
+            /*margin-block: auto;*/
+        }
+
+        .box:nth-child(8) {
+            background-color: hsl(43, 84%, 65%);
+            border-radius: 10px;
+            /*margin-block: auto;*/
+        }
+
+        .box img-right {
+
+        }
+
+
+        .card {
+            font-family: 'Rubik', sans-serif;
+            background-color: hsl(235, 46%, 20%);
+            padding: 30px;
+            margin-top: 50px;
+            height: 200px;
+            border-radius: 10px;
+            position: relative;
+            z-index: 2;
+
+        }
+
+        .card:hover {
+            background-color: hsl(235, 46%, 30%);
+        }
+
+
+        .card h3 {
+            color: white;
+            font-size: 18px;
+
+        }
+
+        .card-hrs p {
+            color: white;
+            margin-left: 0px;
+            margin-top: 30px;
+            font-size: 50px;
+
+
+        }
+
+        .card-date p {
+            color: hsl(236, 100%, 87%);
+            font-size: 15px;
+            margin-top: 10px;
+
+
+        }
+
+        .img-ellipsis:hover {
+            color: white;
+        }
+
+        p {
+            margin-left: 25px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin-top: 10px;
+            margin-left: 25px;
+        }
+
+        button {
+            margin-left: 25px;
+            margin-top: 20px;
+            border: 2px solid hsl(235, 46%, 20%);
+            background-color: hsl(235, 46%, 20%);
+            font-size: 18px;
+            cursor: pointer;
+            display: block;
+            transition: all .3s;
+
+        }
+
+        .btn-date span:hover {
+            color: white;
+
+        }
+
+        @media only screen and (max-width: 1400px) {
+            .container {
+                width: 85%;
+                font-size: 15px;
+                margin: 85px;
+                padding: 5px;
+                grid-gap: 1px;
+
+
+            }
+
+            .box {
+                padding-top: 15px;
+                margin: 15px;
+
+            }
+
+            .card-date p {
+                font-size: 14px;
+            }
+
+        }
+
+        @media only screen and (max-width: 960px ) {
+
+            .container {
+                width: 75%;
+                font-size: 13px;
+                margin: 75px;
+                grid-gap: 16px;
+            }
+
+            .box {
+                padding-top: 10px;
+                margin: 10px;
+
+            }
+
+            .card h3 {
+                font-size: 16px;
+            }
+
+            .card-hrs p {
+                margin-top: 20px;
+                font-size: 45px;
+            }
+
+            .card-date p {
+                font-size: 13px;
+            }
+
+            button {
+                font-size: 16px;
+            }
+
+
+        }
+
+        @media screen and (max-width: 700px) {
+            .container {
+                width: 65%;
+                font-size: 12px;
+                margin: 65px;
+
+            }
+
+            .box {
+                padding-top: 8px;
+                margin: 8px;
+
+            }
+
+            .card h3 {
+                font-size: 14px;
+            }
+
+            .card-hrs p {
+                margin-top: 20px;
+                font-size: 45px;
+            }
+
+            .card-date p {
+                font-size: 13px;
+            }
+
+            button {
+                font-size: 14px;
+            }
+
+            .box .box-img {
+                margin-top: -10px;
+            }
+
+            .box .img-ellipsis {
+                margin-top: -10px;
+            }
+
+            button {
+                padding-left: 30px;
+                padding-right: 10px;
+                margin-right: 10px;
+                float: left;
+                font-size: 15px;
+                cursor: pointer;
+            }
+
+            .btn-date span:hover {
+                color: white;
+            }
+
+
+        }
+
+        /*375 px özellikleri*/
+        @media only screen and (max-width: 560px ) {
+
+            body {
+
+            }
+
+            .container {
+                width: 100%;
+                font-size: 12px;
+                position: relative;
+                display: block;
+                padding: 40px;
+
+
+            }
+
+            .box {
+
+
+                padding-top: 10px;
+                margin: 8px 0;
+
+
+            }
+
+            .box:nth-child(1) p, img {
+
+                display: inline-block;
+                float: left;
+            }
+
+            .box:nth-child(1) p {
+                margin-top: 50px;
+                font-size: 15px;
+                margin-right: 10px;
+            }
+
+
+            .box:nth-child(1) h1 {
+                padding-top: 5px;
+                padding-right: 130px;
+                display: block;
+                font-size: 20px;
+
+                text-align: center;
+            }
+
+            .box:nth-child(2) {
+                font-size: 10px;
+                height: 75px;
+                position: relative;
+                margin-top: 0px;
+                display: block;
+                top: -20px;
+                z-index: -1;
+
+            }
+
+            .card {
+                height: 150px;
+
+            }
+
+            .box .card h3 {
+                font-size: 20px;
+            }
+
+            .box .card-hrs p {
+                margin-top: 5px;
+                font-size: 35px;
+                position: relative;
+                float: left;
+            }
+
+            .box .card-date p {
+                font-size: medium;
+                float: right;
+                margin-top: 20px;
+                display: inline-block;
+            }
+
+            .box .img-ellipsis {
+                margin-top: -15px;
+            }
+
+            button {
+                padding-left: 30px;
+                padding-right: 10px;
+                margin-right: 10px;
+                float: left;
+                font-size: 15px;
+                cursor: pointer;
+            }
+
+            .btn-date span:hover {
+                color: white;
+            }
+
+        }
+
+
+    </style>
+</head>
+<body onload=getJSONFile()>
+
+
+<div class="container">
+
+
+    <div class="box">
+        <img class="img-jemery" src="images/image-jeremy.png" alt="">
+        <div><p>Report for</p></div>
+        <div><h1>Jemery Rapson </h1></div>
+
+
+    </div>
+
+    <div class="box ">
+
+        <div>
+            <button class="btn-date" style="color:hsl(235, 45%, 61%)" onclick=getJSONFile()><span>Daily</span></button>
+            <button class="btn-date" style="color: white" onclick=Weekly()><span>Weekly</span></button>
+            <button class="btn-date" style="color:hsl(235, 45%, 61%)" onclick=Monthly()><span>Monthly</span></button>
+        </div>
+
+    </div>
+
+
+    <div class="box">
+        <img class="box-img" style="float:right;" src="images/icon-work.svg" alt="">
+        <div class="card">
+            <h3 id="card0">Wooork</h3>
+            <img class="img-ellipsis" style="float: right" src="images/icon-ellipsis.svg" alt="">
+            <div class="card-hrs">
+                <p id="card-hrs0">32hrs</p>
+                <div class="card-date">
+                    <p id="card-date0">Last week - 8hrs</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <img style="float:right;" src="images/icon-play.svg" alt="">
+        <div class="card">
+            <h3 id="card1">Play</h3>
+            <img style="float: right" src="images/icon-ellipsis.svg" alt="">
+            <div class="card-hrs">
+                <p id="card-hrs1">10hrs</p>
+                <div class="card-date">
+                    <p id="card-date1">Last week - 8hrs</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <img style="float:right;" src="images/icon-study.svg" alt="">
+        <div class="card">
+            <h3 id="card2">Study</h3>
+            <img style="float: right" src="images/icon-ellipsis.svg" alt="">
+            <div class="card-hrs">
+                <p id="card-hrs2">4hrs</p>
+                <div class="card-date">
+                    <p id="card-date2">Last week - 7hrs</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="box">
+        <img style="float: right" src="images/icon-exercise.svg" alt="">
+        <div class="card">
+            <h3 id="card3">Exercise</h3>
+            <img style="float: right" src="images/icon-ellipsis.svg" alt="">
+            <div class="card-hrs">
+                <p id="card-hrs3">4hrs</p>
+                <div class="card-date">
+                    <p id="card-date3">Last week - 5hrs</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="box">
+        <img style="float: right" src="images/icon-social.svg" alt="">
+        <div class="card">
+            <h3 id="card4">Social</h3>
+            <img style="float: right" src="images/icon-ellipsis.svg" alt="">
+            <div class="card-hrs">
+                <p id="card-hrs4">5hrs</p>
+                <div class="card-date">
+                    <p id="card-date4">Last week - 10hrs</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="box">
+        <img class="image-right" style="float: right" src="images/icon-self-care.svg" alt="">
+        <div class="card">
+            <h3 id="card5">Self Care</h3>
+            <img style="float: right ; display: flex" src="images/icon-ellipsis.svg" alt="">
+            <div class="card-hrs">
+                <p id="card-hrs5">2hrs</p>
+
+                <div class="card-date">
+                    <p id="card-date5">Last week - 2hrs</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
+
