@@ -28,13 +28,13 @@ Users should be able to:
 
 Ekran görüntülerini aşağıdaki linkten ulaşabilirsiniz.
 
-![](./time-tracking-dashboard-main\Screenshot)
+![(./time-tracking-dashboard-main\Screenshot)]
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](http://localhost:63342/Project/Proje%20demo/time-tracking-dashboard-main/index.html?_ijt=a50rv47dlg8b2cojud8he8sbjf)
-- Live Site URL: [Add live site URL here](http://127.0.0.1:5500/index.html)
+- Solution URL: [(http://localhost:63342/Project/Proje%20demo/time-tracking-dashboard-main/index.html?_ijt=a50rv47dlg8b2cojud8he8sbjf)]
+- Live Site URL: [(http://127.0.0.1:5500/index.html)]
 
 ## My process
 
