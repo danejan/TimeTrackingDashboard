@@ -102,10 +102,10 @@ JavaScript dilinde de kendimi daha fazla geliştirmek isterim.
 
 ### Useful resources
 
-- [](https://www.w3schools.com/) - Back-end kısmında kullandım.Kullanımı ve okuması kolaydı.
-- [](https://www.w3schools.com/html/default.asp) - Front-end kısmında kullandım.
-- [](https://www.w3schools.com/css/default.asp) - Front-end kısmında kullandım.
-- [](https://www.youtube.com/channel/UCx-zvHc2a4-gRgVzXH4x5cQ) - Responsive kısmında bu videoların çok faydası oldu.
+- [(https://www.w3schools.com/) - Back-end kısmında kullandım.Kullanımı ve okuması kolaydı.]
+- [(https://www.w3schools.com/html/default.asp) - Front-end kısmında kullandım.]
+- [(https://www.w3schools.com/css/default.asp) - Front-end kısmında kullandım.]
+- [(https://www.youtube.com/channel/UCx-zvHc2a4-gRgVzXH4x5cQ) - Responsive kısmında bu videoların çok faydası oldu.]
 
 
 
