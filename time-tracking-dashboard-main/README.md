@@ -111,8 +111,8 @@ JavaScript dilinde de kendimi daha fazla geliştirmek isterim.
 
 ## Author
 
-- Linkedin - [Dane Jan KEÇE](www.linkedin.com/in/dane-jan-keçe)
-- Frontend Mentor - [@danejan](https://www.frontendmentor.io/profile/danejan)
+- Linkedin - [Dane Jan KEÇE] [(www.linkedin.com/in/dane-jan-keçe)]
+- Frontend Mentor - [@danejan] [(https://www.frontendmentor.io/profile/danejan)]
 
 
 
